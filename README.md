@@ -8,3 +8,4 @@ htmlhint_chrome_extension
     <li>'attr-value-not-empty': true  属性值不为空</li>
     <li>'id-unique': true ID唯一性</li>
 </ul>
+下载地址： http://pan.baidu.com/share/link?shareid=970987820&uk=422670516
