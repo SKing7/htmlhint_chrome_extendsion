@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body {width:600px;  color:#333;  font: 14px 'Helvetica Neue', Helvetica, Tahoma, Arial, sans-serif; }
+        #content { padding:10px 20px; }
+        textarea { display:inline-block; outline:none; height:14px; width:500px; white-space:nowrap; overflow:hidden; border:none; resize:none; vertical-align:middle; margin-left:5px; word-wrap:break-word; word-break:break-all; }
+        h1 { font-size:14px; padding-bottom:10px; border-bottom:1px solid #CCC; white-space:nowrap; text-overflow:elipsis; overflow:hidden; }
+        h1 textarea { width:600px; }
+        .t1 { border:1px solid #CCC; width:540px; padding:5px 10px; margin:10px; height:50px; 
+            -webkit-transition: 500ms ease-in-out;
+        }
+        #J-check { margin-left:10px; }
+        .t1-folder { height:15px; }
+        .go-line { font-size:12px; display:inline-block; margin-left:10px; }
+        h2 { color:green; }
+        .error { color:red; }
+    </style>
+    </head>
+    <body>
+        <textarea class="t1 t1-folder" id="J-code" placeholder="你可以在这里手动填入你要检查的代码段，点“检查”"></textarea><button id="J-check">检查</button>
+        <div id="content"></div>
+        <script type="text/javascript" src="htmlhint.js"></script>
+        <script src="pop.js"></script>
+    </body>
+</html>
