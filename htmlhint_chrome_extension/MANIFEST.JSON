@@ -1,6 +1,6 @@
 {
     "manifest_version":2,
-    "name":"HtmlHint",
+    "name":"HtmlHint_chrome_extension",
     "description":"检查html的正确性",
     "version":"1.0",
     "permissions":[
