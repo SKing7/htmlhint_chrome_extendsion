@@ -1,4 +1,4 @@
-htmlhint_chrome_extendsion
+htmlhint_chrome_extension
 ==========================
 
 基于<strong>@yaniswang</strong><a href="https://github.com/yaniswang/HTMLHint">HtmlHint</a>的chrome extension 
