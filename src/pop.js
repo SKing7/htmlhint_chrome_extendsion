@@ -30,18 +30,24 @@ function(tabs) {
 						x += '<head>'
 						x += '<style>'
 						x += 'body { font-size:12px; }'
-						x += '.line-label { display:inline-block; width:40px; padding:5px 5px 5px 0; margin-right:10px; border:none; cursor:default; text-align:right; background-color:#f1f1f1; border-right:1px solid #bcbcbc; color:#aca299; }'
-						x += '.error-wrapper-color { background:#ffffc1; -webkit-transition:1000ms linear; }'
-						x += '.error-wrapper input { border-right: 2px solid #ee5238; outline:none; }';
+						x += 'p,input,span ,html,body{ margin:0; padding:0; }'
+						x += 'p { margin-left:40px; padding-left:10px; background:#FFF; border-left:1px solid #bcbcbc; }'
+						x += 'div { position:relative; line-height:20px;  background:#f1f1f1; }'
+						x += '.line-label { position:absolute; left:0px; display:inline-block; width:40px; padding:5px 5px 5px 0; margin-right:10px; border:none; cursor:default; text-align:right; background-color:#f1f1f1; color:#aca299; }'
+						x += '.error-wrapper { background:#f1f1f1; }';
+						x += '.error-wrapper input {  outline:none; }';
+						x += '.error-wrapper p { background:#ffffc1; border-left:1px solid #ee5238;  }';
 						x += '.error-wrapper input:focus { outline:10px; }';
-						x += '.error-msg { color:red; text-indent:50px; }';
+						x += '.error-msg { color:red; }';
 						x += '</style>'
 						x += '</head>'
 						x += '<body>'
+						x += '<div>'
 						x += xhr.responseText.replace(/(.*?)(\r?\n)/g, function(word) {
 							i++;
-							return '</p><p><input class="line-label" id="id_' + i + '" value="' + i + '"/>' + htmlEscape(word);
+							return '</div><div><input class="line-label" id="id_' + i + '" value="' + i + '"/><p>' + htmlEscape(word) + '</p>';
 						});
+						x += '</div>'
 						x += '</body>'
 						w.document.write(x);
 						line = e.target.getAttribute('data-line');
@@ -53,7 +59,7 @@ function(tabs) {
                                 w.scrollTo(0, nd.offsetTop - 10);
                                 addClass(ndParent, 'error-wrapper');
                                 addClass(ndParent, 'error-wrapper-color');
-                                ndMsg.innerHTML = htmlEscape(e.target.getAttribute('data-msg'));
+                                ndMsg.innerHTML = 'Error Info: <strong>' + htmlEscape(e.target.getAttribute('data-msg')) + '</strong>';
                                 ndMsg.className = 'error-msg';
                                 ndParent.appendChild(ndMsg);
                                 nd.focus();
