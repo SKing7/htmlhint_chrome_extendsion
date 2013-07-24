@@ -13,6 +13,8 @@ function(tabs) {
 			var msg = HTMLHint.verify(xhr.responseText, {
 				'tag-pair': true,
 				'attr-value-not-empty': true,
+                'attr-value-double-quotes': true,
+                'attr-value-not-empty': true,
 				'id-unique': true
 			});
 			tempCode = create(msg, url);

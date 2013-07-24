@@ -7,5 +7,7 @@ htmlhint_chrome_extension
     <li>'tag-pair': true 标签必须闭合</li>
     <li>'attr-value-not-empty': true  属性值不为空</li>
     <li>'id-unique': true ID唯一性</li>
+    <li>'attr-value-not-empty': true 属性不能为空</li>
+    <li>'attr-value-double-quotes': true 属性值必须用双引号包含</li>
 </ul>
 下载地址： http://pan.baidu.com/share/link?shareid=970987820&uk=422670516
